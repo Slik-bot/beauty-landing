@@ -1,0 +1,168 @@
+/* SCENE PARALLAX — cinematic camera */
+
+.scene-parallax {
+  position: relative;
+  height: 200vh;
+}
+
+.scene-parallax__sticky-wrap {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.scene-parallax__sticky {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/Cosmetologist_facial_treatment_202603270757.jpeg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.sp-layer {
+  position: absolute;
+}
+
+.sp-layer img {
+  position: absolute;
+  display: block;
+  mix-blend-mode: screen;
+  will-change: transform;
+}
+
+/* Косметолог — передний план */
+.sp-layer--master {
+  bottom: 0;
+  left: 0;
+  width: 65%;
+  height: 100%;
+  z-index: 3;
+}
+
+.sp-layer--master img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left bottom;
+  filter: brightness(1.05);
+}
+
+/* Растение — средний слой */
+.sp-layer--plant {
+  top: 5%;
+  right: 28%;
+  width: 22%;
+  height: 55%;
+  z-index: 2;
+  opacity: 0.9;
+}
+
+.sp-layer--plant img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center top;
+  filter: brightness(1.2);
+}
+
+/* Полка — фоновый слой */
+.sp-layer--shelf {
+  top: 0;
+  right: 0;
+  width: 42%;
+  height: 90%;
+  z-index: 1;
+  opacity: 0.85;
+}
+
+.sp-layer--shelf img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: right top;
+  filter: brightness(1.1);
+}
+
+/* Текст поверх */
+.sp-content {
+  position: absolute;
+  right: 6%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  text-align: right;
+  max-width: 380px;
+}
+
+.sp-content__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 3.5vw, 48px);
+  font-weight: 300;
+  line-height: 1.15;
+  color: #fff;
+  margin-top: 12px;
+}
+
+.sp-content__title em {
+  font-family: 'Great Vibes', cursive;
+  font-style: normal;
+  font-size: 1.15em;
+  color: #C4A882;
+  display: block;
+}
+
+.sp-content .label {
+  color: #C4A882;
+  font-family: 'Jost', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+/* PARALLAX LAYERS — will-change */
+.sp-layer--shelf,
+.sp-layer--plant,
+.sp-layer--master {
+  will-change: transform;
+}
+
+/* MOBILE — disable parallax */
+@media (max-width: 767px) {
+  .sp-layer--shelf,
+  .sp-layer--plant,
+  .sp-layer--master {
+    opacity: 1;
+    transform: none;
+    will-change: auto;
+  }
+  #sp-shelf,
+  #sp-plant,
+  #sp-master {
+    transform: none !important;
+    will-change: auto;
+  }
+  .sp-content {
+    right: auto;
+    left: 5%;
+    text-align: left;
+    top: 12%;
+    transform: none;
+  }
+}
+
+/* ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+  .sp-layer--shelf,
+  .sp-layer--plant,
+  .sp-layer--master,
+  #sp-shelf,
+  #sp-plant,
+  #sp-master,
+  .sp-content {
+    will-change: auto;
+    transform: none !important;
+  }
+}

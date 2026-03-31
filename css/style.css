@@ -783,3 +783,39 @@ button {
   background: #fff;
   color: #333;
 }
+
+/* Floating labels */
+.booking__field {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.booking__label {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #999;
+  pointer-events: none;
+  transition: all 0.2s ease;
+  background: transparent;
+}
+
+.booking__field--textarea .booking__label {
+  top: 16px;
+  transform: none;
+}
+
+.booking__field.has-value .booking__label,
+.booking__field.is-focused .booking__label {
+  top: -8px;
+  font-size: 11px;
+  background: #faf8f5;
+  padding: 0 4px;
+  color: #c9a67a;
+}
+
+.booking__select ~ .booking__label {
+  pointer-events: none;
+}

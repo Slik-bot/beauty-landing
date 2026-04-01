@@ -246,13 +246,13 @@ button {
   position: absolute; inset: 0; z-index: 2;
   pointer-events: none; will-change: transform;
 }
-.scene__mid--light { background: radial-gradient(ellipse 60% 80% at 20% 50%, rgba(255,248,235,0.35) 0%, transparent 70%); }
+.scene__mid--light { background: none; }
 .scene__mid--warm { background: radial-gradient(ellipse 50% 70% at 80% 50%, rgba(250,240,220,0.4) 0%, transparent 65%); }
 .scene__mid--dark { background: radial-gradient(ellipse 70% 90% at 50% 50%, transparent 40%, rgba(44,34,24,0.5) 100%); }
 
 /* Overlays per scene */
 .hero__scene::after { content: ''; position: absolute; inset: 0; pointer-events: none; z-index: 4; }
-.hero__scene--1::after { background: linear-gradient(100deg, rgba(250,245,238,0.6) 0%, rgba(250,245,238,0.15) 45%, transparent 70%); }
+.hero__scene--1::after { background: linear-gradient(100deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.15) 50%, transparent 75%); }
 .hero__scene--2::after { background: linear-gradient(260deg, rgba(250,245,238,0.65) 0%, rgba(250,245,238,0.15) 50%, transparent 75%); }
 .hero__scene--3::after { background: rgba(44,34,24,0.35); }
 

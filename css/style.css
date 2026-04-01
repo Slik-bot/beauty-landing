@@ -272,13 +272,14 @@ button {
 .scene__content--right { left: auto; right: 8%; text-align: right; }
 
 .scene__content--center {
-  left: 50%;
-  transform: translate(-50%, -50%) translateY(30px);
-  text-align: center;
+  left: 8%;
+  transform: translateY(30px);
+  text-align: left;
+  top: 35%;
 }
 
 .hero__scene.is-active .scene__content--center {
-  transform: translate(-50%, -50%) translateY(0);
+  transform: translateY(0);
 }
 
 /* Hero typography */

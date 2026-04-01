@@ -571,7 +571,7 @@ button {
 }
 
 .booking__input:focus { outline: none; border-color: var(--color-gold); }
-.booking__input::placeholder { color: var(--color-gold-dark); opacity: 0.5; }
+.booking__input::placeholder { color: var(--color-text); opacity: 1; }
 
 .booking__field { position: relative; }
 .booking__field.is-error .booking__input { border-color: #c0392b; }

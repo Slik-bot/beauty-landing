@@ -253,7 +253,7 @@ button {
 /* Overlays per scene */
 .hero__scene::after { content: ''; position: absolute; inset: 0; pointer-events: none; z-index: 4; }
 .hero__scene--1::after { background: linear-gradient(100deg, rgba(250,245,238,0.6) 0%, rgba(250,245,238,0.15) 45%, transparent 70%); }
-.hero__scene--2::after { background: linear-gradient(260deg, rgba(250,245,238,0.65) 0%, rgba(250,245,238,0.15) 50%, transparent 75%); }
+.hero__scene--2::after { background: linear-gradient(260deg, rgba(30,20,15,0.72) 0%, rgba(30,20,15,0.3) 55%, transparent 78%); }
 .hero__scene--3::after { background: rgba(44,34,24,0.35); }
 
 /* Scene content */
@@ -275,6 +275,7 @@ button {
   left: 50%;
   transform: translate(-50%, -50%) translateY(30px);
   text-align: center;
+  text-align: left;
 }
 
 .hero__scene.is-active .scene__content--center {
@@ -296,14 +297,12 @@ button {
   line-height: 1.15;
   color: #FFFFFF;
   margin-bottom: 16px;
-  text-shadow: 0 1px 8px rgba(0,0,0,0.7), 0 2px 24px rgba(0,0,0,0.5);
 }
 
 .hero__title em {
   font-family: var(--font-accent);
   font-style: normal;
   color: var(--color-gold);
-  text-shadow: 0 1px 8px rgba(0,0,0,0.7), 0 2px 24px rgba(0,0,0,0.5);
 }
 
 .hero__scene--3 .hero__title { color: #fff; }
@@ -314,7 +313,6 @@ button {
   font-size: 16px;
   color: rgba(255,255,255,0.95);
   margin-bottom: 32px;
-  text-shadow: 0 1px 6px rgba(0,0,0,0.8);
 }
 
 /* Progress dots */

@@ -764,3 +764,12 @@ button {
 
 /* Hero контент поверх overlay */
 .scene__content { position: relative; z-index: 5; }
+
+@media (max-width: 767px) {
+  .hero, .section-hero { min-height: 100svh; overflow: hidden; }
+  .hero__bg, .hero__image, .hero__slide, .scene { position: absolute; inset: 0; background-attachment: scroll !important; background-size: cover !important; background-position: center !important; }
+  .hero__content, .hero__text-block, .hero__inner, .scene__content { position: relative; z-index: 5; padding: 40px 20px; color: #fff !important; }
+  .hero__title, .hero__title-main, .hero__title-accent, .scene__title, .scene__subtitle { color: #fff !important; text-shadow: 0 2px 8px rgba(0,0,0,0.6), 0 4px 24px rgba(0,0,0,0.4) !important; font-size: clamp(28px, 8vw, 48px) !important; }
+  .hero__subtitle, .hero__description, .hero__label, .scene__text { color: rgba(255,255,255,0.9) !important; text-shadow: 0 1px 4px rgba(0,0,0,0.5) !important; }
+  .hero::before, .scene::before { background: linear-gradient(to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0.5) 100%) !important; }
+}

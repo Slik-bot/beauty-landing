@@ -46,8 +46,7 @@ const initHeroScroll = () => {
       const s = starts[i] || starts[starts.length - 1];
       const e = ends ? (ends[i] || ends[ends.length - 1]) : 2;
       const appear = Math.max(0, Math.min((lp - s) / 0.18, 1));
-      const fade = lp > e ? Math.max(0, 1 - (lp - e) / 0.15) : 1;
-      gsap.set(line, { opacity: appear * fade, y: 28 - appear * 28 });
+      gsap.set(line, { opacity: appear, y: 28 - appear * 28 });
     });
   };
 
